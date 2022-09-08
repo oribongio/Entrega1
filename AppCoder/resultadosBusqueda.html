@@ -1,0 +1,21 @@
+{% load static %}
+
+{% block titulo_de_pagina %}
+<hi> class="mb-5" TITULO DE INICIO</hi>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% if mensaje %}
+<h2> {{ mensaje }}</h2>
+{% else %}
+
+<h1> resultados de busqueda</h1>
+
+{%or curso in cursos %}
+
+<h2>{{curso.nombre}}</h2>
+<h2>{{ curso.comision}}</h2>
+{% endfor %}
+{% endif %}
+{% endblock %}

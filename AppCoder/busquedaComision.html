@@ -1,0 +1,17 @@
+{% load static %}
+
+{% block titulo_de_pagina %}
+<hi> class="mb-5" TITULO DE INICIO</hi>
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+<!-- <form action="{% url 'cursoFormulario' %}", method="post"> {% csrf_token %}
+    <p>Nombre: <input type="text", name="nombre"></p>
+    <p>Comision: <input type="number", name="comision"</p>
+    <input type="submit" value="Enviar"> -->
+    <form action="{% url 'busquedaComision' %}", method="GET"> {% csrf_token %}
+    <p> comision<input type="number" name="comision", id="comision"></p>
+    <input type="submit" value="Buscar">
+    </form>
+{{}}
